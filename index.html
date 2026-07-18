@@ -970,7 +970,7 @@ addEventListener('click',e=>{
   const hit=ray.intersectObjects(clickables,false)[0];
   if(!hit) return;
   const u=hit.object.userData;
-  if(u.kind==='door') location.href=u.href;
+  if(u.kind==='door') window.open(u.href, '_blank');
   else if(u.kind==='door7'){
     knockT=clock3.elapsedTime;
     soon.style.left=(e.clientX+14)+'px'; soon.style.top=(e.clientY-10)+'px';
